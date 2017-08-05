@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coop's Banner Cycle</title>
+    <script>
+        var banners = ["banner1.jpg", "baner2.jpg", "banner3.jpg"];
+        var counter = 0;
+        function run() {
+          setInterval(cycle, 2000);
+        }
+        function cycle() {
+          counter++;
+          if(counter == banners.length) counter = 0;
+          document.getElementById("banner").src = banners[counter];
+        }
+    </script>
+  </head>
+  <body>
+    <img id="banner" src="banner1.jpg" alt="banner">
+
+  </body>
+</html>
