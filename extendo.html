@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object Oriented Programming</title>
+    <script>
+      function Person(personName){
+        this.name = personName;
+        this.infp = 'This person is called ' + this.name;
+        this.showInfo = function(){
+          alert(this.info);
+        }
+      }
+      var person1 = new Person('Tay');
+      var person2 = new Person('Pukey');
+      Person.prototype.saysHello = function() {
+        alert(this.name + " says hello");
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Show Info on Tay" onclick="person1.showInfo()" />
+    <input type="button" value="Show Info on Pukey" onclick="person2.showInfo()" />
+    <input type="button" value="Say Hello Tay" onclick="person1.sayHello()" />
+    <input type="button" value="Say Hello Pukey" onclick="person2.sayHello()" />
+
+
+  </body>
+</html>
