@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hour 8 Yo</title>
+    <script>
+    function jsonParse() {
+      var inString = prompt("Enter JSON object");
+      var out = " ";
+      myObject = JSON.parse(inString);
+      for (i in myObject) {
+        out += "Property: " + i + " = " + myObject[i] + '\n';
+      }
+      alert(out);
+    }
+    </script>
+  </head>
+  <body onload="jsonParse()">
+
+  </body>
+</html>
