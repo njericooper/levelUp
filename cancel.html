@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cancelling Default Behavior</title>
+  <script>
+    function checkForm(){
+      document.getElementById("form1").onsubmit = function() {
+        var allowSubmit = true;
+        if(document.getElementById("user").value == ""){
+          alert("Hey, you forgot to enter your name!!");
+          allowSubmit = false;
+        }
+        if(allowSubmit) alert("Data OK - Submiting form");
+        return allowSubmit;
+
+      }
+    }
+    window.onload = checkForm;
+  </script>
+  </head>
+  <body>
+     <form id="form1">
+       Name: <input type="text" value=" " name="username" id="user"/> [Required field]<br/>
+       Phone: <input type="text" value=" " name="telephone" id="phone"/> [Optional field]<br/>
+       <input type="submit" />
+     </form>
+  </body>
+</html>
