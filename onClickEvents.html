@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Event Object</title>
+    <script>
+      function showEvent(){
+        var out = " ";
+        document.getElementById("myButton").onclick = function (e) {
+          if (!e) var e = window.event;
+          for(i in e){
+            out += i + " = " + e[i] + "<br/>";
+          }
+          document.getElementById("output").innerHTML = out;
+        }
+      }
+      window.onload = showEvent;
+    </script>
+  </head>
+  <body>
+    <input id="myButton" type="button" value="Show Event Properties" />
+    <div id="output"></div>
+  </body>
+</html>
