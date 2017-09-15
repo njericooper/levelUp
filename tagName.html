@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <script>
+      function countListItems(){
+        var olElement = document.getElemantById("toDoList");
+        var listItems = olElement.getElemantByTagName("li");
+        alert("The ordered list contains" + listItems.length + "items");
+      }
+      window.onload = countListItems;
+    </script>
+  </head>
+  <body>
+    <h1>Things To Do</h1>
+    <ol id="toDoList">
+      <li>To the Window</li>
+      <li>To the Wall</li>
+      <li>Till the sweat dip down my balls</li>
+
+    </ol>
+    <p id="toDoNotes">All these females.... Awww skeet skeet skeet skeet skeet</p>
+
+  </body>
+</html>
